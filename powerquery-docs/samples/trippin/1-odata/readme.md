@@ -39,7 +39,7 @@ Open the TripPin.pq file and paste in the following connector definition.
 section TripPin;
 
 [DataSource.Kind="TripPin", Publish="TripPin.Publish"]
-shared TripPin.Feed = Value.ReplaceType(TripPinImpl, type function (url as Uri.Type) as any);
+shared TripPin.Feed = Value.ReplaceType(TripPinImpl, type function (url as Uri.Type) as any); //Setting Uri.Type enforces valid URL input
 
 TripPinImpl = (url as text) =>
     let
